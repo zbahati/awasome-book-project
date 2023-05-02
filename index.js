@@ -4,12 +4,6 @@ const authorInput = document.getElementById('author');
 const addBtn = document.getElementById('add');
 const bookList = document.getElementById('bookList');
 
-function removeBook(book) {
-  myBooks = myBooks.filter((b) => b !== book);
-  localStorage.setItem('myBooks', JSON.stringify(myBooks));
-  display();
-}
-
 function display() {
   bookList.innerHTML = '';
   myBooks.forEach((book) => {
@@ -19,10 +13,16 @@ function display() {
     const removeBtn = document.createElement('button');
     removeBtn.textContent = 'Remove';
 
+    function removeBook(book) {
+      myBooks = myBooks.filter((b) => b !== book);
+      localStorage.setItem('myBooks', JSON.stringify(myBooks));
+      display();
+    }
+
     removeBtn.addEventListener('click', () => {
       removeBook(book);
     });
-    bookDiv.append(removeBtn,hr);
+    bookDiv.append(removeBtn, hr);
     bookList.appendChild(bookDiv);
   });
 }
