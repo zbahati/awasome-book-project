@@ -15,7 +15,6 @@ class BookList {
         this.authorInput.value = '';
       }
     });
-
     this.display();
   }
 
@@ -23,16 +22,14 @@ class BookList {
     this.bookList.innerHTML = '';
     this.books.forEach((book) => {
       const bookDiv = document.createElement('li');
-      const hr = document.createElement('hr');
-      bookDiv.innerHTML = `Title: ${book.title} <br> Author: ${book.author} <br>`;
+      bookDiv.innerHTML = `<span>"${book.title}" by ${book.author}</span>`;
       const removeBtn = document.createElement('button');
       removeBtn.textContent = 'Remove';
-
       removeBtn.addEventListener('click', () => {
         this.removeBook(book);
       });
 
-      bookDiv.append(removeBtn, hr);
+      bookDiv.append(removeBtn);
       this.bookList.appendChild(bookDiv);
     });
   }
@@ -50,4 +47,4 @@ class BookList {
   }
 }
 const lists = new BookList();
-lists();
+lists.display();

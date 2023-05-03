@@ -1,5 +1,109 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+main {
+  margin: 10px auto;
+  width: 60%;
+}
+
+main h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 40px;
+  text-transform: uppercase;
+  text-shadow: 0 10px 20px white;
+}
+
+.lists {
+  border: 3px solid rgb(0, 0, 0, 0.2);
+  padding: 6px;
+  margin: 10px 0;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+form button {
+  box-shadow: 4px 4px 0 black;
+  font-size: 18px;
+  font-weight: 700;
+  width: 20%;
+  padding: 10px;
+}
+
+.lists ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.lists ul li span {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.lists ul li:nth-child(odd) {
+  background: rgb(242, 242, 243);
+}
+
+.lists ul li:nth-child(even) {
+  background: rgb(232, 216, 216);
+}
+
+.lists ul li button {
+  padding: 10px;
+  box-shadow: 3px 5px 0 black;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+form {
+  position: relative;
+  width: 50%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form h3 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+form input {
+  padding: 10px;
+  margin-top: 20px;
+  box-shadow: 2px 2px 2px black;
+}
+
+.line {
+  height: 4px;
+  background-color: black;
+  width: 30%;
+  margin: 20px auto;
 }
