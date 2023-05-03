@@ -15,7 +15,6 @@ class BookList {
         this.authorInput.value = '';
       }
     });
-
     this.display();
   }
 
@@ -26,7 +25,6 @@ class BookList {
       bookDiv.innerHTML = `<span>"${book.title}" by ${book.author}</span>`;
       const removeBtn = document.createElement('button');
       removeBtn.textContent = 'Remove';
-
       removeBtn.addEventListener('click', () => {
         this.removeBook(book);
       });
@@ -48,6 +46,5 @@ class BookList {
     this.display();
   }
 }
-
 const lists = new BookList();
 lists.display();
